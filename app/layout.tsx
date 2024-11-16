@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import NavbarPage from "@/components/Home/Navbar/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Safari Pigora",
@@ -30,9 +18,9 @@ export default function RootLayout({
       <html lang="en">
         <head>
           <link rel="icon" href="./icon/Logo.png" />
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></link>
         </head>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <NavbarPage />
           {children}
