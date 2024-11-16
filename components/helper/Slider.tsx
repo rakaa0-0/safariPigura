@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 const images = [
   '/images/hhero1.png',
@@ -31,7 +32,7 @@ const Slider = () => {
       <div ref={slideRef} className="flex">
         {images.map((image, index) => (
           <div key={index} className="w-full flex-shrink-0">
-            <img src={image} alt={`Slide ${index}`}  width={400} height={400} className="rounded-lg" draggable={false} />
+            <Image src={image} alt={`Slide ${index}`}  width={400} height={400} className="rounded-lg" draggable={false} />
           </div>
         ))}
       </div>
